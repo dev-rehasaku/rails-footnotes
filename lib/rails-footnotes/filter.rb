@@ -47,7 +47,8 @@ module Footnotes
         if args.empty?
           @@prefix
         else
-          args.map! { |arg| URI.escape(arg.to_s) }
+          require "addressable"
+          args.map! { |arg| Addressable::URI.encode(arg.to_s) }
 
           if @@prefix.respond_to? :call
             @@prefix.call *args

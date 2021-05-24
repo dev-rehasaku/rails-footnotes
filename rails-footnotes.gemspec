@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "rails-footnotes"
 
   s.add_dependency "rails", ">= 3.2"
+  s.add_dependency "addressable", "~> 2.3"
 
   s.add_development_dependency "rspec-rails", '~> 3.3.2'
   s.add_development_dependency "sprockets-rails", '~> 2.0'
